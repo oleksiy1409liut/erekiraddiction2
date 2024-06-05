@@ -1,0 +1,154 @@
+{
+  "type": "ItemTurret",
+  "name": "flame",
+  "description": "uses coal to shoot very fiery bullets at enemies, can be boosted by ozone",
+  "size": 3,
+  "squareSprite": false,
+  "drawer": {
+    "type": "DrawTurret",
+    "basePrefix": "reinforced-",
+    "parts": [
+      {
+        "type": "drawPartRegion",
+        "recoilIndex": 0,
+        "moveY": -3.5,
+        "suffix": "-blade-l",
+        "heatProgress": "recoil",
+        "progress": "recoil"
+      },
+      {
+        "type": "drawPartRegion",
+        "recoilIndex": 1,
+        "moveY": -3.5,
+        "suffix": "-blade-r",
+        "heatProgress": "recoil",
+        "progress": "recoil"
+      },
+      {
+        "type": "drawPartRegion",
+        "moveY": -2,
+        "suffix": "-side-r",
+        "progress": "warmup"
+      },
+      {
+        "type": "drawPartRegion",
+        "moveY": -2,
+        "suffix": "-side-l",
+        "progress": "warmup"
+      }
+    ]
+  },
+  "consumes": {
+    "coolant": {
+      "liquid": "ozone",
+      "booster": 2,
+      "amount": 0.2,
+      "coolantMultiplier": 1.5,
+    },
+  },
+  "researchCostMultiplier": 0.2,
+  "health": 1660,
+  "reload": 20,
+  "range": 240,
+  "inaccuracy": 0,
+  "recoil": 2,
+  "rotateSpeed": 2,
+  "shootSound": "shoot",
+  "recoils": 2,
+  "shoot": {
+    "type": "ShootBarrel",
+    "shotDelay": 3,
+    "barrels": [
+    -3, -6, 0,
+    3, -6, 0,
+    ]
+  }
+  "ammoTypes": {
+    "coal": {
+      "type": "FireBulletType",
+        "sprite": "bullet", 
+        "shootEffect": {
+          "type": "MultiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",
+              "region": "circle",
+              "colorFrom": "ea887888",
+              "colorTo": "bc545288",
+              "cone": 40,
+              "baseRotation": 180,
+              "particles": 4,
+              "sizeFrom": 2,
+              "sizeTo": 2,
+              "lifetime": 60,
+              "lengthOffset": 4,
+              "offsetY": -3,
+              "offsetX": 16,
+            },
+            {
+              "type": "ParticleEffect",
+              "region": "circle",
+              "colorFrom": "ea887888",
+              "colorTo": "bc545288",
+              "cone": 40,
+              "baseRotation": 180,
+              "particles": 4,
+              "sizeFrom": 2,
+              "sizeTo": 2,
+              "lifetime": 60,
+              "lengthOffset": 4,
+              "offsetY": 3,
+              "offsetX": 16,
+            },
+            {
+              "type": "ParticleEffect",
+              "region": "circle",
+              "colorFrom": "fdb38088",
+              "colorTo": "bc545288",
+              "cone": 40,
+              "particles": 3,
+              "sizeFrom": 2,
+              "sizeTo": 1,
+              "lifetime": 60,
+              "lengthOffset": 4,
+            },
+          ]
+        },
+        "damage": 50,
+        "weaveScl": 1,
+        "weaveMag": 1,
+        "pierce": true,
+        "pierceBuilding": false,
+        "status": "burning",
+        "statusDuration": 240,
+        "speed": 4,
+        "shrinkY": 0,
+        "shrinkX": 0,
+        "width": 6,
+        "height": 6,
+        "trailColor": "ea8878",
+        "trailLength": 16,
+        "trailWidth": 2,
+        "lifetime": 80,
+        "lightColor": "fdb380",
+        "colorFrom": "fdb380",
+        "colorTo": "ea8878"
+      }
+    },
+  "requirements": [
+    "silicon/200",
+    "graphite/310",
+    "beryllium/290"
+  ],
+  "category": "turret",
+  "research": {
+    "parent": "diffuse",
+    "objectives": [
+      "diffuse",
+      {
+        "type": "OnSector",
+        "preset": "erekir-additions-presence",
+      }
+    ]
+  }
+}

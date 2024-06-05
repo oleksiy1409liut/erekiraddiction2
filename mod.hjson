@@ -1,0 +1,11 @@
+name: "erekir maps"
+description: 
+''' 
+adds new erekir sectors and some content
+'''
+author: "oleksiy"
+minGameVersion: 146
+version: "1.3"
+displayName: "erekirmaps"
+subtitle: "Don't forget to reinstall every so often!"
+dependencies: ["erekir-additions"]

@@ -1,0 +1,23 @@
+localizedName: catacomb valley
+description: 
+''' 
+  two well protected enemy bases are established here, destroy them to research new contents and to use coal
+''' 
+planet: erekir
+sector: 2
+research: {
+parent: lake
+  objectives: [
+    {
+      type: SectorComplete
+      preset: lake
+    }
+    {
+      type: SectorComplete
+      preset: erekir-additions-presence
+    }
+  ]
+}
+
+difficulty: 1
+alwaysUnlocked: true
