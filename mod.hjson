@@ -1,11 +1,11 @@
 name: "erekir maps"
 description: 
 ''' 
-adds new erekir sectors and some content
+adds many new things for mindustry
 '''
 author: "oleksiy"
 minGameVersion: 146
-version: "1.3"
-displayName: "erekirmaps"
+version: "1.8"
+displayName: "mindustry extended"
 subtitle: "Don't forget to reinstall every so often!"
 dependencies: ["erekir-additions"]
